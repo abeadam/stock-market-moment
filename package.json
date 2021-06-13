@@ -1,0 +1,15 @@
+{
+  "name": "stock-market-moment",
+  "version": "1.0.0",
+  "description": "will calculate days and time left in current trading day",
+  "main": "calcDate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "moment-business-days": "^1.2.0",
+  }
+}
