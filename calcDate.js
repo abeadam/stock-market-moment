@@ -41,8 +41,3 @@ export function getTradingDaysDiff(dateToCompare = moment()) {
   const currentDate = moment();
   return dateToCompare.businessDiff(currentDate);
 }
-
-const result = getPercentOfDayLeft(moment(marketOpening).add({hours: 3}));
-console.log(result);
-const dayResult = getTradingDaysLeft(moment("6/15/2021", "MM/DD/YYYY"));
-console.log(dayResult);
