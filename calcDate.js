@@ -3,11 +3,11 @@ import moment from 'moment-business-days';
 
 // source of data
 const stockMarketCloserDays = [
-  "1/1/2021",
-  "1/18/2021",
-  "2/15/2021",
-  "4/2/2021",
-  "5/31/2021",
+  "1/3/2022",
+  "1/17/2022",
+  "2/21/2022",
+  "4/15/2022",
+  "5/30/2022",
   "7/5/2021",
   "9/6/2021",
   "11/25/2021",
@@ -26,7 +26,7 @@ moment.updateLocale('us', {
 });
 
 // will return the % of the trading day left
-function getPercentOfDayLeft(timeToCompare = moment()) {
+export function getPercentOfDayLeft(timeToCompare = moment()) {
   if (marketOpening.isSameOrAfter(timeToCompare)) {
     return 1;
   } else if (marketClose.isSameOrBefore(timeToCompare)) {
@@ -37,7 +37,7 @@ function getPercentOfDayLeft(timeToCompare = moment()) {
 }
 
 // will return the number of trading days between now a given day
-function getTradingDaysDiff(dateToCompare = moment()) {
+export function getTradingDaysDiff(dateToCompare = moment()) {
   const currentDate = moment();
   return dateToCompare.businessDiff(currentDate);
 }
